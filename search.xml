@@ -4,32 +4,13 @@
   
     
     <entry>
-      <title>post_name</title>
-      <link href="/2021/11/11/post-name/"/>
-      <url>/2021/11/11/post-name/</url>
+      <title>calm</title>
+      <link href="/2021/11/11/calm/"/>
+      <url>/2021/11/11/calm/</url>
       
         <content type="html"><![CDATA[<p><img src="../images/test.png"></p>]]></content>
       
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>测试博客</title>
-      <link href="/2021/11/11/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/"/>
-      <url>/2021/11/11/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/</url>
-      
-        <content type="html"><![CDATA[<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p><img src="images/test.png"></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> web </tag>
-            
-        </tags>
       
     </entry>
     
