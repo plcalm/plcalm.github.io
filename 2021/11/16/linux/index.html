@@ -4,8 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, AIclam">
-    <meta name="description" content="Welcome to here! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Linux打卡学习, AIclam">
+    <meta name="description" content="1. 登录服务器
+
+
+2. 在目录下创建文件夹、删除文件夹Linux的目录结构系统启动必须
+/etc 系统管理所需的配置文件和子目录
+/boot 存放启动Linux时的一些核心文件，包括链接文件以及镜像文件
+/lib 系统最基本的动态链接共">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +23,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | AIclam</title>
+    <title>Linux打卡学习 | AIclam</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -314,7 +320,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Linux打卡学习</h1>
                 </div>
             </div>
         </div>
@@ -430,8 +436,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/tags/">
-                                <span class="chip bg-color">tags</span>
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
                             </a>
                         
                     </div>
@@ -442,8 +448,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/test2/" class="post-category">
-                                test2
+                            <a href="/categories/%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                工具学习
                             </a>
                         
                     </div>
@@ -455,7 +461,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-10
+                    2021-11-16
                 </div>
                 
 
@@ -476,19 +482,196 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to here! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">hexo new <span class="token string">"My New Post"</span>
+                <h3 id="1-登录服务器"><a href="#1-登录服务器" class="headerlink" title="1. 登录服务器"></a>1. 登录服务器</h3><img src="/2021/11/16/linux/login.png" style="zoom:80%;">
+
+
+<h3 id="2-在目录下创建文件夹、删除文件夹"><a href="#2-在目录下创建文件夹、删除文件夹" class="headerlink" title="2. 在目录下创建文件夹、删除文件夹"></a>2. 在目录下创建文件夹、删除文件夹</h3><h4 id="Linux的目录结构"><a href="#Linux的目录结构" class="headerlink" title="Linux的目录结构"></a>Linux的目录结构</h4><p><strong>系统启动必须</strong></p>
+<p><strong><code>/etc</code></strong> 系统管理所需的配置文件和子目录</p>
+<p><code>/boot</code> 存放启动Linux时的一些核心文件，包括链接文件以及镜像文件</p>
+<p><code>/lib</code> 系统最基本的动态链接共享库，作用类似 Windows 中的DLL文件</p>
+<p><code>/sys</code> Linux2.6内核的一个很大的变化，安装其内核新出现的一个文件系统sysfs</p>
+<p><strong>指令集合</strong></p>
+<p><strong><code>/bin</code></strong> 存放经常使用的命令，<strong>系统用户</strong></p>
+<p><strong><code>/sbin</code></strong> 超级用户的二进制文件缩写，存放<strong>系统管理员</strong>的系统管理程序</p>
+<p><strong>外部文件管理</strong></p>
+<p><code>/dev</code> Linux的外部设备，Linux中访问设备和访问文件是一样的</p>
+<p><code>/media</code> Linux系统自动识别设备放在这个目录下</p>
+<p><code>/mnt</code> 系统提供该目录为了让用户临时挂载别的文件系统，可以将光驱挂载在这个文件夹下</p>
+<p><strong>临时文件</strong></p>
+<p><code>/run</code> 临时文件系统，存储系统重启以来的信息</p>
+<p><code>/lost+found</code> 当非法关机后，存放一些文件</p>
+<p><code>/tmp</code> 临时文件</p>
+<p><strong>账号</strong></p>
+<p><code>/root</code> 该目录是系统管理员的主目录</p>
+<p><code>/home</code> 用户主目录</p>
+<p><code>/usr</code> 共享资源的缩写，用户应用程序和文件存放处，类似于windows下的 program files目录</p>
+<p><strong><code>/usr/bin</code></strong> <strong>系统用户</strong>所使用的应用程序</p>
+<p><strong><code>/usr/sbin</code></strong> 超级用户使用的比较高级的<strong>管理程序和系统守护程序</strong></p>
+<p><code>/usr/src</code> 内核源代码默认的放置目录</p>
+<p><strong>运行过程中要用</strong></p>
+<p><code>/var</code> 经常需要修改的目录在这个目录下，包括各种日志文件</p>
+<p><code>/proc</code> 一种伪文件系统，存储当前内核运行状态的一系列特殊文件，虚拟目录是内存的映射，可以访问这个目录获取系统信息</p>
+<p><strong>扩展使用</strong></p>
+<p><code>/opt</code> 给主机额外安装软件所摆放的目录</p>
+<p><code>/srv</code> 服务启动之后需要提取的数据</p>
+<p><code>/selinux</code> 这个目录是Redhat/CentOS所特有的目录，Selinux是一个安全机制，类似Windows的防火墙</p>
+<h4 id="Linux文件于目录管理"><a href="#Linux文件于目录管理" class="headerlink" title="Linux文件于目录管理"></a>Linux文件于目录管理</h4><p>Linux的目录结构为树状结构，最顶级的目录为根目录 <code>/</code> </p>
+<p>其他目录通过挂载将它们添加到树种，也可以解除挂载</p>
+<p>绝对路径 <code>/</code> 开始， 相对路径 <code>./</code> 、<code>../</code> 表示当前目录和上级目录</p>
+<p><strong>处理目录常用命令</strong></p>
+<p><code>ls</code> 列出目录和文件名</p>
+<p>​    <code>-a</code> 全部文件</p>
+<p>​    <code>-d</code> 仅列出目录本身</p>
+<p>​    <code>-l</code> 长数据串列出，包含文件属性和权限等</p>
+<p><code>cd</code> 切换目录</p>
+<p><code>pwd</code> 显示目前的目录</p>
+<p>​    <code>-P</code> 显示出确实的路径，而不是link路径</p>
+<p><code>mkdir</code> 创建一个目录</p>
+<p>​    <code>-m</code> 配置文件的权限</p>
+<p>​    <code>-p</code> 递归创建目录</p>
+<p><code>rmdir</code> 删除一个空的目录</p>
+<p>​    <code>-p</code> 递归删除，详细目录</p>
+<p><code>cp</code> <code>[--adfilprsu]</code>复制文件或目录， 源+目标</p>
+<p>​    <code>-r</code> 递归持续复制</p>
+<p>​    <code>-s</code> 复制成符号链接</p>
+<p>​    <code>-i</code> 若目标存在，则会询问</p>
+<p><code>rm</code>  <code>-fir</code> 删除文件或目录</p>
+<p>​    <code>-r</code> 递归删除</p>
+<p>​    <code>-f</code> 强制</p>
+<p>​    <code>-i</code> 询问</p>
+<p><code>mv</code>  <code>[-fiu]</code> 移动文件与目录，或者修改文件与目录的名称</p>
+<p>​    <code>-f</code> 强制</p>
+<p>​    <code>-i</code> 询问</p>
+<p>​    <code>-u</code> 若目标已经存在，源比较新才会升级</p>
+<p><strong>Linux文件内容查看</strong></p>
+<p><code>cat</code> <code>[-AbEnTv]</code> 从第一行开始显示文件内容</p>
+<p><code>tac</code> 从最后一行开始显示</p>
+<p><code>nl</code> <code>[-bnw]</code> 显示的时候带上行号</p>
+<p><code>more</code> 一页一页显示文件内容</p>
+<p><code>less</code> 和 <code>more</code> 类似，但是能向前翻页</p>
+<p><code>head</code> <code>[-n]</code> 只看几行</p>
+<p><code>tail</code> <code>[-n]</code> 只看尾部几行</p>
+<p>可以使用 <code>man [命令]</code> 查看命令详细用法</p>
+<p>硬链接和软链接</p>
+<p><code>ln f1 f2</code> 创建硬链接</p>
+<p><code>ln -s f1 f3</code> 创建软链接</p>
+<p><code>ls -li</code> <code>-i</code> 显示文件的inode节点信息</p>
+<pre class=" language-shell"><code class="language-shell">cd /home
+cd coggle
+# 创建文件夹 plcalm
+mkdir plcalm
+cd plcalm
+# 创建文件夹 coggle
+mkdir coggle
+cd coggle
+# 创建文件 test.txt
+touch test.txt
+# 删除文件 test.txt
+rm test.txt
+cd ..
+# 删除文件夹
+rm -r coggle/
+cd ..
+# 删除文件夹
+rm -r plcalm/
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">hexo server
+<h3 id="3-在目录下下载文件、阅读文件"><a href="#3-在目录下下载文件、阅读文件" class="headerlink" title="3. 在目录下下载文件、阅读文件"></a>3. 在目录下下载文件、阅读文件</h3><p>wget教程：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/pretty-ru/p/10936023.html">教程</a></p>
+<p>阅读文件教程：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/jixp/p/10833801.html">教程</a></p>
+<pre class=" language-shell"><code class="language-shell"># 在/home/coggle目录下，新建plcalm文件夹
+cd /home/coggle
+mkdir plcalm
+# 在plcalm文件夹中新建coggle文件夹
+cd plcalm
+# 下载文件
+wget https://mirror.coggle.club/dataset/affairs.txt
+# 使用head、cat、tail 文件查看文件
+head -n 10 affairs.txt
+tail -n 10 affairs.txt
+cat affairs.txt
+# 使用ipython进入python环境
+ipython
+>>>import pandas as pd
+>>>data = pd.read_table("affairs.txt", sep=",")
+>>>data[:5]            # 打印前5行
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">hexo generate
+<p><strong>利用pandas读取和写入文件</strong></p>
+<p>读取.csv文件：pd.read_csv(path,[index_col=列的下标]), 路径上可以加上r，防止路径产生歧义</p>
+<p>读取.txt文件：pd.read_table(path, sep=”,”), 以’,’为分隔符号读入</p>
+<p>读取.excel文件：pd.read_excel(path)</p>
+<p>写入.csv文件：变量名.to_csv(文件路径+文件名, index=False)</p>
+<p>写入.txt文件：变量名.to_csv(文件路径+名字，sep=’\t’, index=False)</p>
+<p>写入.excel文件：变量名.to_excel(文件名+名字, index=False)</p>
+<h3 id="4-在目录下使用vi或vim编辑文件"><a href="#4-在目录下使用vi或vim编辑文件" class="headerlink" title="4. 在目录下使用vi或vim编辑文件"></a>4. 在目录下使用vi或vim编辑文件</h3><p>Nano教程：<a target="_blank" rel="noopener" href="https://blog.csdn.net/junxieshiguan/article/details/84104912">教程</a></p>
+<p><code>Ctrl+G</code> 相当于指令说明书</p>
+<p><code>Ctrl+X</code> 离开nano软件</p>
+<p><code>Ctrl+C</code> 显示光标处行列信息</p>
+<p>Vim教程：<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-vim.html">教程</a></p>
+<p>三种模式：命令模式、输入模式、底线命令模式</p>
+<p>刚启动便是命令模式，输入 <code>i</code> 进入输入模式，<code>x</code> 删除光标所在字符，<code>:</code> 切换到底线命令模式</p>
+<p>输入模式，正常输入即可，<code>ESC</code> 退出输入模式，<code>insert</code> 切换光标为输入/替换模式，光标变成竖线/下划线</p>
+<p>底线命令模式，在命令模式，<code>:</code> 进入底线命令模式，<code>q</code> 退出程序，<code>w</code> 保存程序，<code>!</code> 强制删除</p>
+<h3 id="5-在目录下创建py文件，并运行"><a href="#5-在目录下创建py文件，并运行" class="headerlink" title="5. 在目录下创建py文件，并运行"></a>5. 在目录下创建py文件，并运行</h3><p>os模块：<a target="_blank" rel="noopener" href="https://www.runoob.com/python/os-file-methods.html">教程</a></p>
+<p>sys模块：<a target="_blank" rel="noopener" href="https://www.runoob.com/python3/python3-module.html">教程</a></p>
+<pre class=" language-shell"><code class="language-shell"># 新建文件test5.py
+cd /home/coggle
+touch test5.py
+vim test5.py
+"""程序：
+
+#!/usr/bin/env python3
+import sys
+print('命令参数如下：')
+for i in sys.argv:
+    print(i)
+"""
+python3 test5.py
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">hexo deploy
+<p>结果：</p>
+<img src="/2021/11/16/linux/1.png">
+
+<pre class=" language-shell"><code class="language-shell"># 打印/usr/bin/下的所有m开头的文件
+touch test_os.py
+vim test_os.py
+"""程序
+#!/usr/bin/env python3
+import os
+file_data = os.listdir("/usr/bin")
+for i in file_data:
+    file = os.path.split(i)
+    if file[-1][0] == "m":
+        print(file[-1])
+"""
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>结果：</p>
+<img src="/2021/11/16/linux/2.png" style="zoom:80%;">
+
+<h3 id="6-在目录下创建py目录，并进行import导入"><a href="#6-在目录下创建py目录，并进行import导入" class="headerlink" title="6. 在目录下创建py目录，并进行import导入"></a>6. 在目录下创建py目录，并进行import导入</h3><p>学习python模块化，<a target="_blank" rel="noopener" href="https://www.runoob.com/python3/python3-module.html">教程</a></p>
+<pre class=" language-shell"><code class="language-shell"># /home/coggle/plcalm
+# 新建文件夹affairs
+mkdir affairs
+cd affairs
+# 新建affairs.py
+"""程序：
+#!/usr/bin/env python3
+import pandas as pd
+
+def read_data(path):
+    data = pd.read_csv(path,sep=',')
+    return data
+"""
+# /home/coggle/plcalm
+# 新建test6.py
+"""程序：
+#!/usr/bin/env python3
+import sys
+from affairs.affairs import read_data
+row = sys.argv[1]
+data = read_data("https://mirror.coggle.club/dataset/affairs.txt")
+print(data.iloc[int(row)])                           
+"""
+</code></pre>
+<img src="/2021/11/16/linux/3.png" style="zoom:80%;">
+
 
                 
             </div>
@@ -515,7 +698,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://plcalm.github.io/2021/11/10/hello-world/">https://plcalm.github.io/2021/11/10/hello-world/</a>
+                    <a href="https://plcalm.github.io/2021/11/16/linux/">https://plcalm.github.io/2021/11/16/linux/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -553,8 +736,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/tags/">
-                                    <span class="chip bg-color">tags</span>
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
                                 </a>
                             
                         </div>
@@ -726,17 +909,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/11/11/class/">
+                <a href="/2021/11/16/linux/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Class">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Linux打卡学习">
                         
-                        <span class="card-title">Class</span>
+                        <span class="card-title">Linux打卡学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -746,26 +930,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/test1/" class="post-category">
-                                    test1
+                            <a href="/categories/%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    工具学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/class/">
-                        <span class="chip bg-color">class</span>
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
@@ -779,13 +964,13 @@
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/10/hello-world/">
+                <a href="/2021/11/16/linux/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Linux打卡学习">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Linux打卡学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -796,14 +981,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/test2/" class="post-category">
-                                    test2
+                            <a href="/categories/%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    工具学习
                                 </a>
                             
                             
@@ -814,8 +999,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/tags/">
-                        <span class="chip bg-color">tags</span>
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
@@ -1202,14 +1387,6 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/"><\/script>');
-            }
-        </script>
     
 
     <!-- Baidu Analytics -->

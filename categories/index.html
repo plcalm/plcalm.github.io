@@ -376,24 +376,6 @@
                 </a>
                 
                 
-                <a href="/categories/test1/" title="test1: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">test1
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/test2/" title="test2: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">test2
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
             </div>
         </div>
     </div>
@@ -436,7 +418,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"工具学习","max":2},{"name":"test1","max":2},{"name":"test2","max":2}],
+            indicator: [{"name":"工具学习","max":2}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -447,7 +429,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [1,1,1],
+                    value : [1],
                     name : '文章分类数量'
                 }
             ]
@@ -715,14 +697,6 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/"><\/script>');
-            }
-        </script>
     
 
     <!-- Baidu Analytics -->
