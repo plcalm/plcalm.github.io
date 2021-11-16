@@ -525,7 +525,7 @@ docker login $DOCKER_REGISTRY --username [...] --password [...]
 </code></pre>
 <p><img src="/2021/11/16/docker/tianchi_8.png"></p>
 <p>登录成功就可以push了</p>
-<pre><code> sudo docker tag hello-world:latest registry.cn-hangzhou.aliyuncs.com/命名空间/test:0.1  # 先tag一下
+<pre class=" language-shell"><code class="language-shell">sudo docker tag hello-world:latest registry.cn-hangzhou.aliyuncs.com/命名空间/test:0.1  # 先tag一下
 sudo docker push registry.cn-hangzhou.aliyuncs.com/命名空间/test:0.1            # 再推送
 </code></pre>
 <p>结果成功：</p>
