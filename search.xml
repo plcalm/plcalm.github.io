@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>docker</title>
+      <link href="/2021/11/16/docker/"/>
+      <url>/2021/11/16/docker/</url>
+      
+        <content type="html"><![CDATA[<h4 id="1-Linux安装"><a href="#1-Linux安装" class="headerlink" title="1. Linux安装"></a>1. Linux安装</h4><pre class=" language-shell"><code class="language-shell">sudo curl -sS https://get.docker.com/ | sh</code></pre><p>测试</p><pre class=" language-shell"><code class="language-shell">sudo docker run hello-world</code></pre><p>测试运行</p><pre class=" language-shell"><code class="language-shell">docker run -it ubuntu bash</code></pre><p>若有Gpu:</p><pre class=" language-shell"><code class="language-shell">distribution=$(. /etc/os-release;echo $ID$VERSION_ID)curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.listsudo apt-get update && sudo apt-get install -y nvidia-container-toolkitsudo systemctl restart docker</code></pre><p>拉取一个pytorch镜像</p><pre class=" language-shell"><code class="language-shell">sudo docker pull registry.cn-shanghai.aliyuncs.com/tcc-public/pytorch:1.4-cuda10.1-py3</code></pre><p>运行</p><pre class=" language-shell"><code class="language-shell">sudo docker run --gpus all -it registry.cn-shanghai.aliyuncs.com/tcc-public/pytorch:1.4-cuda10.1-py3 /bin/bash# 加载gpu，不然容器中加载不了gpu，nvidia-smi命令也找不到， all可以改成0,1,2...</code></pre><h4 id="2-创建镜像仓库账号"><a href="#2-创建镜像仓库账号" class="headerlink" title="2. 创建镜像仓库账号"></a>2. 创建镜像仓库账号</h4><p>打开阿里云容器服务地址：<a href="https://cr.console.aliyun.com/">https://cr.console.aliyun.com</a></p><p>注册个人版</p><p><img src="/2021/11/16/docker/tianchi_1.png" alt="image-20211116222717070"></p><p>第一步切换标签页到命名空间，创建地址唯一的命名空间</p><p><img src="/2021/11/16/docker/tianchi_2.png" alt="image-20211116222732008"></p><p>根据大赛要求选择对应的地域，其他按需求填写</p><p><img src="/2021/11/16/docker/tianchi_3.png" alt="image-20211116222834718"></p><p>下一步，选择本地仓库</p><p><img src="/2021/11/16/docker/tianchi_4.png" alt="image-20211116222919093"></p><p>点击管理可查看详情</p><p><img src="/2021/11/16/docker/tianchi_6.png" alt="image-20211116222943179"></p><p>详情页如下，有基本的操作命令，仓库地址一般使用公网地址即可。</p><p><img src="/2021/11/16/docker/tianchi_7.png" alt="image-20211116223015164"></p><p>按照页面的指令在本地完成登录：</p><pre class=" language-shell"><code class="language-shell">export DOCKER_REGISTRY=you_registry_url<docker registry url> # 到命名空间即可（命名空间/仓库名）docker login $DOCKER_REGISTRY --username [...] --password [...]</code></pre><p><img src="/2021/11/16/docker/tianchi_8.png" alt="image-20211116223820764"></p><p>登录成功就可以push了</p><pre><code> sudo docker tag hello-world:latest registry.cn-hangzhou.aliyuncs.com/命名空间/test:0.1  # 先tag一下sudo docker push registry.cn-hangzhou.aliyuncs.com/命名空间/test:0.1            # 再推送</code></pre><p>结果成功：</p><p><img src="/2021/11/16/docker/tianchi_9.png" alt="image-20211116224059059"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ”tianchi_docker“ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux打卡学习</title>
       <link href="/2021/11/16/linux/"/>
       <url>/2021/11/16/linux/</url>
