@@ -520,17 +520,50 @@ sudo systemctl restart docker
 <p>详情页如下，有基本的操作命令，仓库地址一般使用公网地址即可。</p>
 <p><img src="/2021/11/16/docker/tianchi_7.png"></p>
 <p>按照页面的指令在本地完成登录：</p>
-<pre class=" language-shell"><code class="language-shell">export DOCKER_REGISTRY=you_registry_url<docker registry url> # 到命名空间即可（命名空间/仓库名）
+<pre class=" language-shell"><code class="language-shell"># 切换到超级管理员用户，否则环境变量设置是当前用户，会找不到环境变量
+export DOCKER_REGISTRY=you_registry_url<docker registry url> # 到命名空间即可（命名空间/仓库名）
 docker login $DOCKER_REGISTRY --username [...] --password [...]
 </code></pre>
 <p><img src="/2021/11/16/docker/tianchi_8.png"></p>
 <p>登录成功就可以push了</p>
-<pre class=" language-shell"><code class="language-shell">sudo docker tag hello-world:latest registry.cn-hangzhou.aliyuncs.com/命名空间/test:0.1  # 先tag一下
-sudo docker push registry.cn-hangzhou.aliyuncs.com/命名空间/test:0.1            # 再推送
+<pre class=" language-shell"><code class="language-shell">docker tag hello-world:latest registry.cn-hangzhou.aliyuncs.com/命名空间/test:0.1  # 先tag一下
+docker push registry.cn-hangzhou.aliyuncs.com/命名空间/test:0.1            # 再推送
 </code></pre>
 <p>结果成功：</p>
 <p><img src="/2021/11/16/docker/tianchi_9.png"></p>
-<p>参考链接：<a target="_blank" rel="noopener" href="https://tianchi.aliyun.com/forum/postDetail?postId=76615">天池大赛从0开始docker提交</a></p>
+<h4 id="3-构建docker镜像，push到云端"><a href="#3-构建docker镜像，push到云端" class="headerlink" title="3. 构建docker镜像，push到云端"></a>3. 构建docker镜像，push到云端</h4><pre class=" language-shell"><code class="language-shell"># 下载脚本
+wget "http://tianchi-media.oss-cn-beijing.aliyuncs.com/docker-tool/tianchi_docker.zip"
+# 解压
+unzip tianchi_docker.zip
+cd tianchi_docker
+sh docker_build.sh 0.1  # (0.1为自己指定的版本号)
+</code></pre>
+<p>报错：</p>
+<p><img src="/2021/11/16/docker/tianchi_10.png"></p>
+<p>修改Dockerfile</p>
+<p><img src="/2021/11/16/docker/tianchi_11.png"></p>
+<p>修改后</p>
+<p><img src="/2021/11/16/docker/tianchi_12.png"></p>
+<p>push结束后</p>
+<p>大赛提交镜像</p>
+<p><img src="/2021/11/16/docker/tianchi_13.png"></p>
+<p>具体参考文后链接。</p>
+<p>利用dockerfile</p>
+<pre class=" language-shell"><code class="language-shell"># 先移除build_docker.sh
+docker build -t registry.cn-hangzhou.aliyuncs.com/命名空间/tianchi-submit:0.2 .   # 最后一个点是当前路径
+docker push registry.cn-hangzhou.aliyuncs.com/命名空间/tianchi-submit:0.2 
+# 上传结束提交即可
+</code></pre>
+<p>为了解决每次编译都要pip下载的问题，可以修改镜像，然后commit，修改dockerfile即可</p>
+<p>模拟磁盘映射</p>
+<pre class=" language-shell"><code class="language-shell">docker run -it -v /storage:/tcdata registry.cn-shanghai.aliyuncs.com/tcc-public/pytorch:1.4-cuda10.1-py3 # -v 本地路径:镜像路径
+</code></pre>
+<p>将镜像保存</p>
+<pre class=" language-shell"><code class="language-shell">docker save registry.cn-hangzhou.aliyuncs.com/命名空间/tianchi-submit:0.2 -o 123
+# 加载
+docker load -i 123
+</code></pre>
+<p>参考链接：<a target="_blank" rel="noopener" href="https://tianchi.aliyun.com/forum/postDetail?postId=76615">天池大赛从0开始docker提交</a>  <a target="_blank" rel="noopener" href="https://tianchi.aliyun.com/specials/activity/promotion/aicampdocker?spm=5176.12281976.0.0.c4ba77c7oCJBRy">参考视频1</a> <a target="_blank" rel="noopener" href="https://tianchi.aliyun.com/course/351/4131">参考视频2</a> <a target="_blank" rel="noopener" href="https://tianchi.aliyun.com/forum/postDetail?spm=5176.12281915.0.0.570d2cb9SnfgZK&postId=67720">天池基础镜像</a></p>
 
                 
             </div>
