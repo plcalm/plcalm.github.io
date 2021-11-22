@@ -481,7 +481,92 @@
                 <h4 id="1-什么是github"><a href="#1-什么是github" class="headerlink" title="1. 什么是github?"></a>1. 什么是github?</h4><p>Github是用于版本控制和协作开发的代码托管平台</p>
 <h4 id="2-为什么要用github"><a href="#2-为什么要用github" class="headerlink" title="2. 为什么要用github?"></a>2. 为什么要用github?</h4><p>Github是最流行的开源项目托管平台，可以在其中找到优秀的项目学习以有助于自己的研究与开发工作</p>
 <h4 id="3-Git是什么？"><a href="#3-Git是什么？" class="headerlink" title="3. Git是什么？"></a>3. Git是什么？</h4><p>Git是一个版本控制系统，使用Git的项目可以更好的进行版本管理，便于对项目做开发、修改、还原和发布等</p>
-<h4 id="4-Github基本概念"><a href="#4-Github基本概念" class="headerlink" title="4. Github基本概念"></a>4. Github基本概念</h4><h5 id="（1）仓库-Repository"><a href="#（1）仓库-Repository" class="headerlink" title="（1）仓库(Repository)"></a>（1）仓库(Repository)</h5><h5 id="（2）本地-local-与远程-remote"><a href="#（2）本地-local-与远程-remote" class="headerlink" title="（2）本地(local)与远程(remote)"></a>（2）本地(local)与远程(remote)</h5><h5 id="（3）分支-Branch"><a href="#（3）分支-Branch" class="headerlink" title="（3）分支(Branch)"></a>（3）分支(Branch)</h5><h5 id="（4）提交-Commit"><a href="#（4）提交-Commit" class="headerlink" title="（4）提交(Commit)"></a>（4）提交(Commit)</h5><h5 id="（5）拉取请求-Pull-Request"><a href="#（5）拉取请求-Pull-Request" class="headerlink" title="（5）拉取请求(Pull Request)"></a>（5）拉取请求(Pull Request)</h5><h5 id="（6）Fork"><a href="#（6）Fork" class="headerlink" title="（6）Fork"></a>（6）Fork</h5><h5 id="（7）克隆-Clone"><a href="#（7）克隆-Clone" class="headerlink" title="（7）克隆(Clone)"></a>（7）克隆(Clone)</h5><h5 id="（8）星标-Star"><a href="#（8）星标-Star" class="headerlink" title="（8）星标(Star)"></a>（8）星标(Star)</h5><h4 id="5-如何使用Github上的开源项目"><a href="#5-如何使用Github上的开源项目" class="headerlink" title="5. 如何使用Github上的开源项目"></a>5. 如何使用Github上的开源项目</h4><h5 id="（1）Case1-我希望使用某个项目"><a href="#（1）Case1-我希望使用某个项目" class="headerlink" title="（1）Case1. 我希望使用某个项目"></a>（1）Case1. 我希望使用某个项目</h5><h5 id="（2）Case2-我希望修改或者为某个项目增加功能"><a href="#（2）Case2-我希望修改或者为某个项目增加功能" class="headerlink" title="（2）Case2. 我希望修改或者为某个项目增加功能"></a>（2）Case2. 我希望修改或者为某个项目增加功能</h5><h4 id="6-Github使用示例"><a href="#6-Github使用示例" class="headerlink" title="6. Github使用示例"></a>6. Github使用示例</h4><p><a target="_blank" rel="noopener" href="https://aistudio.baidu.com/aistudio/projectdetail/2884515">转载</a></p>
+<h4 id="4-Github基本概念"><a href="#4-Github基本概念" class="headerlink" title="4. Github基本概念"></a>4. Github基本概念</h4><h5 id="（1）仓库-Repository"><a href="#（1）仓库-Repository" class="headerlink" title="（1）仓库(Repository)"></a>（1）仓库(Repository)</h5><p>仓库是用来管理和存放一个单独的项目，一个Repo通常需要一个READMD文件</p>
+<h5 id="（2）本地-local-与远程-remote"><a href="#（2）本地-local-与远程-remote" class="headerlink" title="（2）本地(local)与远程(remote)"></a>（2）本地(local)与远程(remote)</h5><p>本地项目通过 <code>push</code> 到 github上自己的账户中，可以通过 <code>pull</code> 可以对本地仓库进行更新相对于自己的github</p>
+<p>本地项目于远程项目处于相对独立的状态，通过 <code>pull</code> 与 <code>push</code> 命令可以实现代码的更新同步</p>
+<h5 id="（3）分支-Branch"><a href="#（3）分支-Branch" class="headerlink" title="（3）分支(Branch)"></a>（3）分支(Branch)</h5><p>分支可以让我们在项目中处理多个版本，一般默认分支是 <code>main</code> (有的默认分支是master)，通过创建分支来修改项目，然后再提交并入 <code>main</code> 分支。</p>
+<p>分支的重要作用是协同开发，多开发人员就是通过创建分支进行代码的修复开发等然后合并(<code>merge</code>) 到 <code>main</code> 分支上</p>
+<p>当基于 <code>main</code> 分支创建新分支，可以理解为是基于当前 <code>main</code> 分支的一个拷贝，之后如果 <code>main</code> 分支有了新的更改，可以通过 <code>pull</code> 对当前分支进行更新</p>
+<h5 id="（4）提交-Commit"><a href="#（4）提交-Commit" class="headerlink" title="（4）提交(Commit)"></a>（4）提交(Commit)</h5><p>首先需要将工作区文件添加到暂存区 <code>git add hello.c</code></p>
+<p>可以通过 <code>git status</code> 来查看文件状态（确定文件当前所处Git工作区域-工作区、暂存区、仓库），确定哪些文件需要添加，添加到暂存区之后再提交</p>
+<p>然后将暂存区文件提交到仓库 <code>git commit -m &quot;提交描述&quot;</code></p>
+<p>删除工作区文件：<code>git rm -f a.txt</code></p>
+<h5 id="（5）拉取请求-Pull-Request"><a href="#（5）拉取请求-Pull-Request" class="headerlink" title="（5）拉取请求(Pull Request)"></a>（5）拉取请求(Pull Request)</h5><p>拉取请求(Pull Request) 又称作 <code>PR</code>，当提交一个PR，表明将自己对项目的修改并入到别人项目中的某一个分支里去，经过对方项目相关人员进行审核，然后完成并入操作(merge)</p>
+<h5 id="（6）Fork"><a href="#（6）Fork" class="headerlink" title="（6）Fork"></a>（6）Fork</h5><p><code>Fork</code> 通常是指拷贝一个repo，这个repo可以作为你要修改、贡献该项目的起点，或者作为自己项目的一个组件</p>
+<p>如果发现别人项目的bug，可以先fork，然后再拉取请求(PR)</p>
+<h5 id="（7）克隆-Clone"><a href="#（7）克隆-Clone" class="headerlink" title="（7）克隆(Clone)"></a>（7）克隆(Clone)</h5><p>克隆操作指的是将远程项目拷贝到本地进行使用或者修改，使用 <code>clone</code> 命令</p>
+<p>当远程项目有更新时候，直接使用 <code>pull</code> 可以将远程 <code>repo</code> 的更新内容拉取到本地项目中</p>
+<p>如果是自己创建的远程仓库，在本地修改并提交后可以通过 <code>push</code> 命令将这些更新，上传到远程 <code>repo</code> 中</p>
+<pre class=" language-shell"><code class="language-shell">git clone ...
+git pull ...
+git push  ...
+</code></pre>
+<blockquote>
+<p>注：如果Clone的是别人的项目，通常只有pull权限，而不能push，如果想要修改别人的项目可以通过 <code>fork+clone+push+PR</code> 的方式</p>
+</blockquote>
+<h5 id="（8）星标-Star"><a href="#（8）星标-Star" class="headerlink" title="（8）星标(Star)"></a>（8）星标(Star)</h5><p>受欢迎程度</p>
+<h4 id="5-如何使用Github上的开源项目"><a href="#5-如何使用Github上的开源项目" class="headerlink" title="5. 如何使用Github上的开源项目"></a>5. 如何使用Github上的开源项目</h4><h5 id="（1）Case1-我希望使用某个项目"><a href="#（1）Case1-我希望使用某个项目" class="headerlink" title="（1）Case1. 我希望使用某个项目"></a>（1）Case1. 我希望使用某个项目</h5><ol>
+<li>将项目 <code>git clone</code> 到本地</li>
+<li>使用项目</li>
+<li>如果远程有更新，使用 <code>git pull</code> 拉取更新</li>
+</ol>
+<h5 id="（2）Case2-我希望修改或者为某个项目增加功能"><a href="#（2）Case2-我希望修改或者为某个项目增加功能" class="headerlink" title="（2）Case2. 我希望修改或者为某个项目增加功能"></a>（2）Case2. 我希望修改或者为某个项目增加功能</h5><ol>
+<li>将远程 Repo <code>fork</code> 到自己的github中</li>
+<li>将此仓库 <code>git clone</code> 到本地</li>
+<li>进行修改增加</li>
+<li>将修改后的代码 <code>commit</code> 到仓库</li>
+<li><code>git push</code> 推送到自己的远程仓库</li>
+<li>通过 <code>Pull Request</code> 拉取请求</li>
+<li>对方项目相关人员审核无误之后就可以并入Repo</li>
+</ol>
+<h4 id="6-Github使用示例"><a href="#6-Github使用示例" class="headerlink" title="6. Github使用示例"></a>6. Github使用示例</h4><ol>
+<li><p>下载并开始使用PaddleViT项目</p>
+<ol>
+<li><p>克隆项目到本地</p>
+<pre class=" language-shell"><code class="language-shell">git clone https://github.com/BR-IDL/PaddleViT.git
+</code></pre>
+</li>
+<li><p>安装依赖</p>
+</li>
+<li><p>使用</p>
+</li>
+</ol>
+</li>
+<li><p>参与PaddleViT项目的开发:</p>
+<ol>
+<li><p>Fork</p>
+</li>
+<li><p>Clone</p>
+<pre class=" language-shell"><code class="language-shell">git clone https://github.com/YOUR_ACCOUNT/PaddleViT.git
+</code></pre>
+</li>
+<li><p>进入项目文件夹创建新 <code>branch</code>，默认会基于 <code>develop</code> 分支创建新分支</p>
+<pre class=" language-shell"><code class="language-shell">git checkout -b YOUR_BRANCH_NAME
+</code></pre>
+<p> <code>YOUR_BRANCH_NAME</code> 是分支名</p>
+</li>
+<li><p>完成开发</p>
+</li>
+<li><p>完成 <code>commit</code></p>
+<pre class=" language-shell"><code class="language-shell">git add .  # 将当前文件夹下的所有文件都提交到暂存区
+git commit -m "YOUR_BRANCH_NAME" #message简洁明了, 这一步将暂存区文件全部提交到本地仓库
+</code></pre>
+</li>
+<li><p>将代码 <code>push</code> 到远程</p>
+<pre class=" language-shell"><code class="language-shell">git push origin YOUR_BRANCH_NAME # origin通常是指向本地代码在github上的远程版本
+</code></pre>
+</li>
+<li><p>创建 <code>PR</code> </p>
+<ol>
+<li>在GitHub项目页面，点击 <code>Pull Request</code> Tab</li>
+<li>点击 <code>New pull request</code> ，选择 Forked Repo的分支和目标推送到项目的分支</li>
+<li>点击 <code>Create pull request</code> </li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://aistudio.baidu.com/aistudio/projectdetail/2884515">转载</a></p>
 
                 
             </div>
