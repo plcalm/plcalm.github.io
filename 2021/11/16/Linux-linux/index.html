@@ -672,6 +672,20 @@ print(data.iloc[int(row)])
 </code></pre>
 <img src="/2021/11/16/Linux-linux/3.png" style="zoom:80%;">
 
+<h4 id="7-在Linux系统中后台运行应用程序"><a href="#7-在Linux系统中后台运行应用程序" class="headerlink" title="7. 在Linux系统中后台运行应用程序"></a>7. 在Linux系统中后台运行应用程序</h4><p>步骤1：新建sleep.py文件，实现功能-1.程序一致运行，2. 每10秒输出当前时间</p>
+<p>代码：</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># sleep.py</span>
+<span class="token keyword">import</span> time 
+<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span>ctime<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+</code></pre>
+<p>运行结果</p>
+<p><img src="/2021/11/16/Linux-linux/sleep_py.md"></p>
+<p>步骤2：学习 <code>&amp;</code> 和 <code>nohup</code> 后台执行方法</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/a736933735/article/details/89577557">https://blog.csdn.net/a736933735/article/details/89577557</a></p>
+<p>​          <a target="_blank" rel="noopener" href="http://ipcmen.com/jobs">http://ipcmen.com/jobs</a></p>
+<p>步骤3：学习 <code>tmux</code> 的使用，将步骤1的程序进行后台运行，并将输出结果写入到txt文件。</p>
 
                 
             </div>
