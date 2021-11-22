@@ -523,7 +523,7 @@ sudo systemctl restart docker
 <pre class=" language-shell"><code class="language-shell"># 切换到超级管理员用户，否则环境变量设置是当前用户，会找不到环境变量
 export DOCKER_REGISTRY=you_registry_url<docker registry url> # 到命名空间即可（命名空间/仓库名）
 docker login $DOCKER_REGISTRY --username [...] --password [...]
-</docker></code></pre>
+</code></pre>
 <p><img src="/2021/11/16/Docker-docker/tianchi_8.png"></p>
 <p>登录成功就可以push了</p>
 <pre class=" language-shell"><code class="language-shell">docker tag hello-world:latest registry.cn-hangzhou.aliyuncs.com/命名空间/test:0.1  # 先tag一下
