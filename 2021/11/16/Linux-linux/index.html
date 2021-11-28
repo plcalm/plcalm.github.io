@@ -1257,7 +1257,20 @@ while(1):
 <li><p>步骤3：时候用locate寻找到python3.preinst文件</p>
 </li>
 </ul>
-<h4 id="开始打卡10"><a href="#开始打卡10" class="headerlink" title="开始打卡10"></a>开始打卡10</h4>
+<h4 id="开始打卡10"><a href="#开始打卡10" class="headerlink" title="开始打卡10"></a>开始打卡10</h4><p>步骤1：使用find 统计文件系统中以py为后缀名的文件个数，这里就用用户目录代替，因为没有超级管理员权限，有些文件夹访问不了，<code>find . -name &quot;*.py&quot; | wc -l</code></p>
+<p>参考链接：<a target="_blank" rel="noopener" href="http://noahsnail.com/2017/02/07/2017-02-07-Linux%E7%BB%9F%E8%AE%A1%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6%E6%95%B0%E7%9B%AE/">参考</a></p>
+<p><code>ls -l</code>：显示当前目录的文件和目录信息</p>
+<p><code>ls -lR</code>：列出所有文件，包含子目录</p>
+<p><code>grep &quot;^-&quot;</code>：查找行首为’-‘的文件，’-‘指的是文件，’d’指的是目录</p>
+<p><code>wc -l</code>: 统计输出信息的行数</p>
+<p><img src="/2021/11/16/Linux-linux/10-%E6%AD%A5%E9%AA%A41%E6%98%BE%E7%A4%BApy%E6%96%87%E4%BB%B6%E4%B8%AA%E6%95%B0.png"></p>
+<p>步骤2：使用find寻找/home/文件夹下文件内容包含coggle的文件：<code>find  /home/ -name &quot;coggle&quot;</code></p>
+<p><img src="/2021/11/16/Linux-linux/10-%E6%AD%A5%E9%AA%A42%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E5%8C%85%E5%90%ABcoggle%E7%9A%84%E6%96%87%E4%BB%B6.png"></p>
+<p>这里不知道有没有理解错误，是文件内容吗？应该就是文件夹名字含coggle的文件夹和文件？可能想复杂了</p>
+<p>步骤3：用locate寻找python3.preinst文件</p>
+<p><img src="/2021/11/16/Linux-linux/10-%E6%AD%A5%E9%AA%A43locate%E5%AE%9A%E4%BD%8D%E6%96%87%E4%BB%B6.png"></p>
+<p>Linux打卡学习结束，任重道远，需要慢慢学习！</p>
+
                 
             </div>
             <hr/>
