@@ -1096,6 +1096,8 @@ while(1):
 <p>  <a target="_blank" rel="noopener" href="https://mirror.coggle.club/dataset/jaychou_lyrics.txt.zip">https://mirror.coggle.club/dataset/jaychou_lyrics.txt.zip</a></p>
 </li>
 <li><p>步骤2：利用grep命令完成以下操作，并输出到屏幕</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/baidu_41388533/article/details/107610827?accessToken=eyJhbGciOiJIUzI1NiIsImtpZCI6ImRlZmF1bHQiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhY2Nlc3NfcmVzb3VyY2UiLCJleHAiOjE2MzgwNjUzMTIsImciOiJkdW1yc2V4VFJKa3FTZ0lDIiwiaWF0IjoxNjM4MDY1MDEyLCJ1c2VySWQiOi0xMzA4NzM5NDc0fQ.krxtArvkRFd9m8XB9wKMRIV-26aIp9ske8zOr7ozglk">https://blog.csdn.net/baidu_41388533/article/details/107610827</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-grep.html?accessToken=eyJhbGciOiJIUzI1NiIsImtpZCI6ImRlZmF1bHQiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhY2Nlc3NfcmVzb3VyY2UiLCJleHAiOjE2MzgwNjUzMTIsImciOiJkdW1yc2V4VFJKa3FTZ0lDIiwiaWF0IjoxNjM4MDY1MDEyLCJ1c2VySWQiOi0xMzA4NzM5NDc0fQ.krxtArvkRFd9m8XB9wKMRIV-26aIp9ske8zOr7ozglk">https://www.runoob.com/linux/linux-comm-grep.html</a></p>
 <ul>
 <li>统计歌词中包含【超人】的歌词</li>
 <li>统计歌词中包含【外婆】但不包含【期待】的歌词</li>
@@ -1111,19 +1113,140 @@ while(1):
 <li><p>将歌词中所有【我】替换成【你】</p>
 </li>
 </ul>
-<h4 id="开始打卡8"><a href="#开始打卡8" class="headerlink" title="开始打卡8"></a>开始打卡8</h4><h3 id="9-在目录下创建zip和tar压缩文件，并进行解压"><a href="#9-在目录下创建zip和tar压缩文件，并进行解压" class="headerlink" title="9. 在目录下创建zip和tar压缩文件，并进行解压"></a>9. 在目录下创建zip和tar压缩文件，并进行解压</h3><p>任务要点：文件压缩</p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wxlf/p/8117602.html">https://www.cnblogs.com/wxlf/p/8117602.html</a></p>
+<h4 id="开始打卡8"><a href="#开始打卡8" class="headerlink" title="开始打卡8"></a>开始打卡8</h4><p>步骤1：下载解压完成</p>
+<p><img src="/2021/11/16/Linux-linux/8-%E6%AD%8C%E8%AF%8D%E6%96%87%E4%BB%B6%E8%A7%A3%E5%8E%8B%E5%AE%8C%E6%88%90.png"></p>
+<p>步骤2：</p>
+<p><strong>grep命令</strong></p>
+<p>Linux grep 命令用于查找文件里符合条件的字符串</p>
+<p>命令格式</p>
+<pre><code>grep [选项] &quot;搜索内容&quot; 文件名
+</code></pre>
+<p>选项：<code>-i</code> 忽略大小写，<code>-n</code> 输出行号，<code>-v</code> 反向查找(不包含的所有行)，<code>--color=auto</code> 搜索出的关键字用颜色显示</p>
+<p><strong>find命令和grep命令区别</strong></p>
 <ul>
-<li><p>步骤1：在/home/coggle目录下在你英文昵称（中间不要有空格）的文件夹中，下载<a target="_blank" rel="noopener" href="https://mirror.coggle.club/dataset/jaychou_lyrics.txt.zip">https://mirror.coggle.club/dataset/jaychou_lyrics.txt.zip</a></p>
+<li><p><strong>find命令</strong></p>
+<p>  用于在系统中搜索符合条件的<strong>文件名</strong>，如果需要模糊查询，则使用通配符进行匹配，<strong>通配符是完全匹配</strong></p>
 </li>
-<li><p>步骤2：使用zip 压缩/home/coggle目录下在你英文昵称（中间不要有空格哦）的文件夹</p>
-</li>
-<li><p>将步骤3：将 /home/coggle目录下在你英文昵称（中间不要有空格哦）的文件夹，打包为tar格式。</p>
-</li>
-<li><p>步骤4：将 /home/coggle目录下在你英文昵称（中间不要有空格哦）的文件夹，打包为tar.gz格式。</p>
+<li><p><strong>grep命令</strong></p>
+<p>  用于在文件中搜索符合条件的<strong>字符串</strong>，如果需要模糊查询，则使用正则表达式进行匹配，<strong>正则表达式是包含匹配</strong></p>
 </li>
 </ul>
-<h4 id="开始打卡9"><a href="#开始打卡9" class="headerlink" title="开始打卡9"></a>开始打卡9</h4><h3 id="10-使用find和locate定位文件"><a href="#10-使用find和locate定位文件" class="headerlink" title="10. 使用find和locate定位文件"></a>10. 使用find和locate定位文件</h3><p>任务要点：文件搜索</p>
+<p><strong>通配符与正则表达式的区别</strong></p>
+<p>通配符：用于匹配文件名，完全匹配</p>
+<table>
+<thead>
+<tr>
+<th>通配符</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>？</td>
+<td>匹配一个任意字符</td>
+</tr>
+<tr>
+<td>*</td>
+<td>匹配0个或任意多个任意字符，也就是可以匹配任何内容</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>匹配中括号中任意一个字符。例如，[abc]代表一定匹配一个字符，或者是 a，或者是 b，或者是 c</td>
+</tr>
+<tr>
+<td>[-]</td>
+<td>匹配中括号中任意一个字符，-代表一个范围。例如，[a-z]代表匹配一个小写字母</td>
+</tr>
+<tr>
+<td>[^]</td>
+<td>逻辑非，表示匹配不是中括号内的一个字符。例如，[^0-9]代表匹配一个不是数字的字符</td>
+</tr>
+</tbody></table>
+<p>详细举例查看链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/baidu_41388533/article/details/107610827?accessToken=eyJhbGciOiJIUzI1NiIsImtpZCI6ImRlZmF1bHQiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhY2Nlc3NfcmVzb3VyY2UiLCJleHAiOjE2MzgwNjUzMTIsImciOiJkdW1yc2V4VFJKa3FTZ0lDIiwiaWF0IjoxNjM4MDY1MDEyLCJ1c2VySWQiOi0xMzA4NzM5NDc0fQ.krxtArvkRFd9m8XB9wKMRIV-26aIp9ske8zOr7ozglk">举例</a></p>
+<pre class=" language-shell"><code class="language-shell">find 位置 -name "通配符"      # find . -name "a?c"
+</code></pre>
+<p>正则表达式：用于匹配字符串，包含匹配</p>
+<table>
+<thead>
+<tr>
+<th>正则符</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>？</td>
+<td>匹配前一个字符重复 0 次，或 1 次（?是扩展正则，需要使用 egrep 命令）</td>
+</tr>
+<tr>
+<td>*</td>
+<td>匹配前一个字符重复 0 次，或任意多次</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>匹配中括号中任意一个字符。例如，[abc]代表一定匹配一个字符，或者是 a，或者是 b，或者是 c</td>
+</tr>
+<tr>
+<td>[-]</td>
+<td>匹配中括号中任意一个字符，-代表一个范围。例如，[a-z]代表匹配一个小写字母</td>
+</tr>
+<tr>
+<td>[^]</td>
+<td>逻辑非，表示匹配不是中括号内的一个字符。例如，[^0-9]代表匹配一个不是数字的字符</td>
+</tr>
+<tr>
+<td>^</td>
+<td>匹配行首</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配行尾</td>
+</tr>
+</tbody></table>
+<pre class=" language-shell"><code class="language-shell">grep 选项 搜索内容 文件名        # grep  "a*" abc
+</code></pre>
+<p>详细举例：<a target="_blank" rel="noopener" href="https://blog.csdn.net/baidu_41388533/article/details/107610827?accessToken=eyJhbGciOiJIUzI1NiIsImtpZCI6ImRlZmF1bHQiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhY2Nlc3NfcmVzb3VyY2UiLCJleHAiOjE2MzgwNjUzMTIsImciOiJkdW1yc2V4VFJKa3FTZ0lDIiwiaWF0IjoxNjM4MDY1MDEyLCJ1c2VySWQiOi0xMzA4NzM5NDc0fQ.krxtArvkRFd9m8XB9wKMRIV-26aIp9ske8zOr7ozglk">举例</a></p>
+<p>统计歌词中包含【超人】的歌词</p>
+<p><img src="/2021/11/16/Linux-linux/8-%E7%BB%9F%E8%AE%A1%E5%8C%85%E5%90%AB%E8%B6%85%E4%BA%BA%E7%9A%84%E6%AD%8C%E8%AF%8D.png"></p>
+<p>统计歌词中包含【外婆】但是不包含【期待】的歌词：<code>grep &quot;外婆&quot; jaychou_lyrics.txt | grep -v &quot;期待&quot;</code></p>
+<img src="/2021/11/16/Linux-linux/8-统计包含外婆但是不包含期待的歌词.png" style="zoom: 80%;">
+
+<p>统计歌词中【我】开头的歌词：<code>grep &quot;^我&quot; jaychou_lyrics.txt</code></p>
+<p><img src="/2021/11/16/Linux-linux/8-%E7%BB%9F%E8%AE%A1%E5%BC%80%E5%A4%B4%E6%98%AF%E6%88%91%E7%9A%84%E6%AD%8C%E8%AF%8D.png"></p>
+<p>统计歌词中【我】结尾的歌词：<code>grep &quot;我$&quot; jaychou_lyrics.txt</code> </p>
+<p>​        <img src="/2021/11/16/Linux-linux/8-统计结尾是我的歌词.png" style="zoom:80%;"></p>
+<p>步骤3：</p>
+<p><strong>sed用法</strong></p>
+<pre class=" language-shell"><code class="language-shell">sed [-nefri] "command" 输入文本
+</code></pre>
+<p>太多了，参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/JohnLiang/p/6202962.html">https://www.cnblogs.com/JohnLiang/p/6202962.html</a></p>
+<p>将歌词中的第2行至第40行删除命令：<code>sed -i &quot;2,40d&quot;jaychou_lyrics.txt </code></p>
+<p>先显示：<code>sed -n &quot;2,40p&quot; jaychou_lyrics.txt</code></p>
+<img src="/2021/11/16/Linux-linux/8-sed删除前查看文件.png" style="zoom:80%;">
+
+<p>后删除：<code>sed -i &quot;2,40d&quot; jaycho_lyrics.txt</code> </p>
+<p>再显示：<code>sed -n &quot;2,40p&quot; jaycho_lyrics.txt</code> </p>
+<img src="/2021/11/16/Linux-linux/8-sed删除后再显示文件.png" style="zoom:80%;">
+
+<p>可以发现文件行数被删除了</p>
+<p>将歌词中所有的【我】替换成【你】命令：<code>sed -i &#39;s/我/你/g&#39; jaychou_lyrics.txt</code> </p>
+<img src="/2021/11/16/Linux-linux/8-sed替换我为你.png" style="zoom:80%;">
+
+<h3 id="9-在目录下创建zip和tar压缩文件，并进行解压"><a href="#9-在目录下创建zip和tar压缩文件，并进行解压" class="headerlink" title="9. 在目录下创建zip和tar压缩文件，并进行解压"></a>9. 在目录下创建zip和tar压缩文件，并进行解压</h3><p>任务要点：文件压缩</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wxlf/p/8117602.html">https://www.cnblogs.com/wxlf/p/8117602.html</a></p>
+<ul>
+<li>步骤1：在/home/coggle目录下在你英文昵称（中间不要有空格）的文件夹中，下载<a target="_blank" rel="noopener" href="https://mirror.coggle.club/dataset/jaychou_lyrics.txt.zip">https://mirror.coggle.club/dataset/jaychou_lyrics.txt.zip</a></li>
+<li>步骤2：使用zip 压缩/home/coggle目录下在你英文昵称（中间不要有空格哦）的文件夹</li>
+<li>将步骤3：将 /home/coggle目录下在你英文昵称（中间不要有空格哦）的文件夹，打包为tar格式。</li>
+<li>步骤4：将 /home/coggle目录下在你英文昵称（中间不要有空格哦）的文件夹，打包为tar.gz格式。</li>
+</ul>
+<h4 id="开始打卡9"><a href="#开始打卡9" class="headerlink" title="开始打卡9"></a>开始打卡9</h4><p>步骤1：下载完成，之前下载过…</p>
+<p><img src="/2021/11/16/Linux-linux/9-%E4%B8%8B%E8%BD%BD%E5%8E%8B%E7%BC%A9%E5%8C%85.png"></p>
+<p>步骤2：压缩完成 <code>zip plcalm.zip plcalm/</code> : zip是命令，plcalm.zip是压缩包名字，plcalm/是文件夹</p>
+<p><img src="/2021/11/16/Linux-linux/9-%E5%8E%8B%E7%BC%A9%E6%88%90zip%E5%8C%85.png"></p>
+<p>步骤3： 打包完成 <code>tar czvf plcalm.tar plcalm</code> </p>
+<p><img src="/2021/11/16/Linux-linux/Study\Blog\github\source_posts\Linux\linux\9-打包完成tar.png"></p>
+<p>步骤4：打包完成targz, <code>tar czvf plcalm.tar.gz plcalm</code></p>
+<p><img src="/2021/11/16/Linux-linux/9-%E6%89%93%E5%8C%85%E5%8E%8B%E7%BC%A9targz.png"></p>
+<h3 id="10-使用find和locate定位文件"><a href="#10-使用find和locate定位文件" class="headerlink" title="10. 使用find和locate定位文件"></a>10. 使用find和locate定位文件</h3><p>任务要点：文件搜索</p>
 <p><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-find.html?accessToken=eyJhbGciOiJIUzI1NiIsImtpZCI6ImRlZmF1bHQiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhY2Nlc3NfcmVzb3VyY2UiLCJleHAiOjE2Mzc3NTUxNTQsImciOiJkdW1yc2V4VFJKa3FTZ0lDIiwiaWF0IjoxNjM3NzU0ODU0LCJ1c2VySWQiOi0xMjkwOTE3MDU5fQ.i-v1eFtrovrv0TBhDuRHv5u3PlmBnrRwsZZNpm49FWs">https://www.runoob.com/linux/linux-comm-find.html</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/linjiqin/p/11678012.html?accessToken=eyJhbGciOiJIUzI1NiIsImtpZCI6ImRlZmF1bHQiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhY2Nlc3NfcmVzb3VyY2UiLCJleHAiOjE2Mzc3NTUxNTQsImciOiJkdW1yc2V4VFJKa3FTZ0lDIiwiaWF0IjoxNjM3NzU0ODU0LCJ1c2VySWQiOi0xMjkwOTE3MDU5fQ.i-v1eFtrovrv0TBhDuRHv5u3PlmBnrRwsZZNpm49FWs">https://www.cnblogs.com/linjiqin/p/11678012.html</a></p>
 <ul>
