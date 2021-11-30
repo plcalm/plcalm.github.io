@@ -8,13 +8,19 @@
       <link href="/2021/11/30/Other-%E8%B7%AF%E7%94%B1%E5%A4%9A%E8%B4%A6%E5%8F%B7%E8%AE%BE%E7%BD%AE/"/>
       <url>/2021/11/30/Other-%E8%B7%AF%E7%94%B1%E5%A4%9A%E8%B4%A6%E5%8F%B7%E8%AE%BE%E7%BD%AE/</url>
       
-        <content type="html"><![CDATA[<h4 id="路由器多账号登录配置"><a href="#路由器多账号登录配置" class="headerlink" title="路由器多账号登录配置"></a>路由器多账号登录配置</h4><ol><li>首先网线输入连接路由wan口，然后重置路由器，设置基本信息后将路由器的DHCP关闭即可</li><li>将wan口网线连接至lan口并且断开路由器电源再连接，然后就可实现多个账号连接路由器，使用的</li></ol><p><a href="https://blog.csdn.net/Suqiaoyi/article/details/109139014?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.no_search_link&spm=1001.2101.3001.4242.1">参考链接</a></p>]]></content>
+        <content type="html"><![CDATA[<h4 id="路由器多账号登录配置"><a href="#路由器多账号登录配置" class="headerlink" title="路由器多账号登录配置"></a>路由器多账号登录配置</h4><ol><li>首先网线输入连接路由wan口，然后重置路由器，设置基本信息后将路由器的DHCP关闭即可</li><li>将wan口网线连接至lan口并且断开路由器电源再连接，然后就可实现多个账号连接路由器</li></ol><p><a href="https://blog.csdn.net/Suqiaoyi/article/details/109139014?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.no_search_link&spm=1001.2101.3001.4242.1">参考链接</a></p>]]></content>
       
+      
+      <categories>
+          
+          <category> 路由配置 </category>
+          
+      </categories>
       
       
         <tags>
             
-            <tag> da </tag>
+            <tag> 路由配置 </tag>
             
         </tags>
       
