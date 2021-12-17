@@ -4,18 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="vim--yyds, AIcalm">
-    <meta name="description" content="1. 什么是vim
-vim是Linux系统上一款文本编辑器
-
-vim有四种模式：
-
-正常模式（Normal-mode）
-插入模式（Insert-mode）
-命令模式（Command-mode）
-可视模式（Visual-mode）
-
-2. 什">
+    <meta name="keywords" content="pots, AIcalm">
+    <meta name="description" content="pots | AIcalm">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -27,7 +17,7 @@ vim有四种模式：
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>vim--yyds | AIcalm</title>
+    <title>pots | AIcalm</title>
     <link rel="icon" type="image/jpeg" href="/media/logo.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -256,12 +246,12 @@ vim有四种模式：
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">vim--yyds</h1>
+                    <h1 class="description center-align post-title">pots</h1>
                 </div>
             </div>
         </div>
@@ -375,25 +365,12 @@ vim有四种模式：
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/vim/">
-                                <span class="chip bg-color">vim</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                工具学习
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -402,7 +379,7 @@ vim有四种模式：
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-24
+                    2021-12-08
                 </div>
                 
 
@@ -423,94 +400,7 @@ vim有四种模式：
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="1-什么是vim"><a href="#1-什么是vim" class="headerlink" title="1. 什么是vim"></a>1. 什么是vim</h4><blockquote>
-<p>vim是Linux系统上一款文本编辑器</p>
-</blockquote>
-<p>vim有四种模式：</p>
-<ul>
-<li>正常模式（Normal-mode）</li>
-<li>插入模式（Insert-mode）</li>
-<li>命令模式（Command-mode）</li>
-<li>可视模式（Visual-mode）</li>
-</ul>
-<h4 id="2-什么是正常模式？"><a href="#2-什么是正常模式？" class="headerlink" title="2. 什么是正常模式？"></a>2. 什么是正常模式？</h4><p>正常模式一般用于浏览文件，包括复制、粘贴、删除等操作，vim启动后默认是正常模式</p>
-<p>命令模式和可视模式执行完操作后就会自动进入正常模式，如果进入命令模式和可视模式没有执行任何操作，按两下 <code>ESC</code> 即可进入正常模式</p>
-<h4 id="3-什么是插入模式？"><a href="#3-什么是插入模式？" class="headerlink" title="3. 什么是插入模式？"></a>3. 什么是插入模式？</h4><p>在正常模式下，按下 <code>i</code> 键进入插入模式，然后就可以进行插入编辑工作</p>
-<p><code>i</code> 在光标前插入， <code>I</code> 在行首插入，<code>a</code> 在光标后插入</p>
-<p><code>o</code> 在下一行插入，<code>O</code> 是在上一行插入</p>
-<p>进入插入模式：</p>
-<img src="/2021/11/24/Vim-vim/vim普通模式进入插入模式.png" style="zoom: 80%;">
-
-<p>退出插入模式到正常模式：</p>
-<img src="/2021/11/24/Vim-vim/插入模式退回普通模式.png" style="zoom: 80%;">
-
-<h4 id="4-什么是命令模式？"><a href="#4-什么是命令模式？" class="headerlink" title="4. 什么是命令模式？"></a>4. 什么是命令模式？</h4><p>在正常模式下，按下 <code>:</code> 或者 <code>/</code> 会进入命令模式，在命令模式下可以输入一些vim提供的指令，同样退回用 <code>ESC</code> 命令</p>
-<img src="/2021/11/24/Vim-vim/普通模式和命令模式的切换.png" style="zoom: 80%;">
-
-<h4 id="5-什么是可视模式？"><a href="#5-什么是可视模式？" class="headerlink" title="5. 什么是可视模式？"></a>5. 什么是可视模式？</h4><p>在正常模式下，按下 <code>v，V，ctrl+v</code> 都可以进入可视模式， </p>
-<p>正常模式进入可视模式：</p>
-<img src="/2021/11/24/Vim-vim/普通模式进入可视模式.png" style="zoom: 80%;">
-
-<p>可视模式退出到正常模式：</p>
-<img src="/2021/11/24/Vim-vim/可视模式退出到普通模式.png" style="zoom: 80%;">
-
-<h4 id="6-光标移动"><a href="#6-光标移动" class="headerlink" title="6. 光标移动"></a>6. 光标移动</h4><img src="/2021/11/24/Vim-vim/光标移动hjkl.png" style="zoom: 80%;">
-
-<p><code>w</code>，<code>b</code>， <code>e</code>，<code>ge</code> 单词的开头结尾控制</p>
-<img src="/2021/11/24/Vim-vim/光标移动wbege.png" style="zoom: 80%;">
-
-<p>行首行尾控制</p>
-<img src="/2021/11/24/Vim-vim/光标移动0^$ggG.png" style="zoom: 80%;">
-
-<p>操作字符，太优秀了！</p>
-<img src="/2021/11/24/Vim-vim/光标移动查找字符fFtT.png" style="zoom: 80%;">
-
-<h4 id="7-动作-motion"><a href="#7-动作-motion" class="headerlink" title="7. 动作 motion"></a>7. 动作 motion</h4><img src="/2021/11/24/Vim-vim/动作ia.png" style="zoom: 80%;">
-
-<img src="/2021/11/24/Vim-vim/动作ia细节.png" style="zoom: 80%;">
-
-<h4 id="8-操作符"><a href="#8-操作符" class="headerlink" title="8. 操作符"></a>8. 操作符</h4><img src="/2021/11/24/Vim-vim/操作符dcyv.png" style="zoom: 80%;">
-
-<h4 id="9-操作符和动作"><a href="#9-操作符和动作" class="headerlink" title="9. 操作符和动作"></a>9. 操作符和动作</h4><img src="/2021/11/24/Vim-vim/操作符和动作实操1-5.png">
-
-<p><code>ciw</code> 修改单词并进入插入模式，<code>diw</code> 删除单词，<code>yiw</code> 复制单词，<code>p</code> 进行粘贴</p>
-<img src="/2021/11/24/Vim-vim/操作符和动作2-9.png">
-
-<p><code>ci&lt;</code> 修改泛型，<code>di&lt;</code> 删除泛型，<code>da&lt;</code> 连同 <code>&lt;</code> 一起删除</p>
-<p><code>di(</code> 删除括号中的内容，<code>dib</code> 是相同的操作</p>
-<p><code>di[</code> 删除中括号中的内容，同理…</p>
-<p><code>dd</code> 删除一行，<code>2dd</code> 向下删除两行</p>
-<p><code>dfs</code> 删除到s，<code>cfs</code> 修改到s，<code>yfs</code> 复制到s</p>
-<img src="/2021/11/24/Vim-vim/操作符和动作4.png">
-
-<p><code>di&#123;</code> 删除返回值，<code>diB</code> 是相同的操作，<code>B</code> 是 <code>&#123;</code> 的代替，<code>da&#123;</code> 删除包含大括号的内容</p>
-<img src="/2021/11/24/Vim-vim/操作符和动作6-11.png">
-
-<p>10中 <code>d^</code> 删掉开头，<code>d$</code> 删除结尾， <code>c^</code> 删除之前的并进入写入模式</p>
-<p>11中可以 <code>yie</code> 复制整个文件、<code>die</code> 删除整个文件、<code>cie</code> 删除文件并进入写入模式</p>
-<img src="/2021/11/24/Vim-vim/操作符和动作11.png">
-
-<p><code>cit</code> 删除标签并进入写入模式， <code>dit</code> 删除一段标签</p>
-<p>操作符号 <code>v</code></p>
-<p>先按 <code>v</code> 再 <code>jj</code> 进行文字的选中， <code>v</code> 就是选中操作符</p>
-<h4 id="10-大小写"><a href="#10-大小写" class="headerlink" title="10. 大小写"></a>10. 大小写</h4><img src="/2021/11/24/Vim-vim/切换大小写~.png" style="zoom: 67%;">
-
-<p>可以 <code>viwU</code> 就是选中改为大写</p>
-<h4 id="11-Tips"><a href="#11-Tips" class="headerlink" title="11. Tips"></a>11. Tips</h4><p>函数跳转 <code>gd</code> ，跳转回去是：<code>ctrl+o</code></p>
-<p>函数提示 <code>gh</code></p>
-<p>标签页向后跳转 <code>gt</code>， 向前跳转 <code>gT</code>， <code>4gt</code> 跳转4个标签页</p>
-<p><code>command+0</code> 跳转菜单栏， <code>space</code> 展开， <code>l</code> 可以光标从菜单栏跳到文件显示</p>
-<p>分屏的时候 <code>command+1</code> 跳转到第一个</p>
-<p><code>u</code>是撤销操作，<code>ctrl+r</code>是反撤销</p>
-<h3 id="12-其他"><a href="#12-其他" class="headerlink" title="12.其他"></a>12.其他</h3><p><code>x</code>删除</p>
-<p>``<leader> <leader>` char 查找字符，并跳转</leader></leader></p>
-<p><code>cs&quot; &#39;</code>：将双引号改为单引号,  <code>ds &#39;</code>：删除引号， <code>cs &#39; t</code>再123，可以插入123标签</p>
-<p><code>ysiw &quot;</code>：在单词两边加入 <code>&quot;</code></p>
-<h3 id="13-分屏操作"><a href="#13-分屏操作" class="headerlink" title="13.分屏操作"></a>13.分屏操作</h3><p>参考链接：<a target="_blank" rel="noopener" href="https://os.51cto.com/art/202012/633360.htm">https://os.51cto.com/art/202012/633360.htm</a>  </p>
-<p>vim链接：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/68111471">https://zhuanlan.zhihu.com/p/68111471</a></p>
-<p>参考链接：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/68111471">https://zhuanlan.zhihu.com/p/68111471</a> </p>
-<p>参考链接：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1z541177Jy?p=4">https://www.bilibili.com/video/BV1z541177Jy?p=4</a></p>
-
+                
                 
             </div>
             <hr/>
@@ -536,7 +426,7 @@ vim有四种模式：
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://plcalm.github.io/2021/11/24/Vim-vim/">https://plcalm.github.io/2021/11/24/Vim-vim/</a>
+                    <a href="https://plcalm.github.io/2021/12/08/Python-pathlib%E5%AD%A6%E4%B9%A0/">https://plcalm.github.io/2021/12/08/Python-pathlib%E5%AD%A6%E4%B9%A0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -573,11 +463,7 @@ vim有四种模式：
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/vim/">
-                                    <span class="chip bg-color">vim</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -751,13 +637,13 @@ vim有四种模式：
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/11/24/DeepLearning-%E5%8D%B7%E7%A7%AF%E6%80%BB%E7%BB%93-convolution/">
+                <a href="/2021/12/17/Software-Setting-Vscode-romote-xming/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="convolution总结">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Vscode远程连接服务器&amp;xming远程图像显示">
                         
-                        <span class="card-title">convolution总结</span>
+                        <span class="card-title">Vscode远程连接服务器&amp;xming远程图像显示</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -768,14 +654,14 @@ vim有四种模式：
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-24
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-17
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Deep-Learning/" class="post-category">
-                                    Deep Learning
+                            <a href="/categories/software-setting/" class="post-category">
+                                    software_setting
                                 </a>
                             
                             
@@ -785,8 +671,8 @@ vim有四种模式：
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Deep-Learning/">
-                        <span class="chip bg-color">Deep Learning</span>
+                    <a href="/tags/software-setting/">
+                        <span class="chip bg-color">software_setting</span>
                     </a>
                     
                 </div>
@@ -800,13 +686,13 @@ vim有四种模式：
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/22/GitHub-github/">
+                <a href="/2021/12/02/Pytorch-Dataset%E5%92%8CDataLoader%E8%AF%A6%E8%A7%A3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Github">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Pytorch数据加载-Dataset和DataLoader详解">
                         
-                        <span class="card-title">Github</span>
+                        <span class="card-title">Pytorch数据加载-Dataset和DataLoader详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -817,14 +703,14 @@ vim有四种模式：
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/github/" class="post-category">
-                                    github
+                            <a href="/categories/pytorch%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD/" class="post-category">
+                                    pytorch数据加载
                                 </a>
                             
                             
@@ -834,8 +720,8 @@ vim有四种模式：
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%B7%A5%E5%85%B7%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">工具学习</span>
+                    <a href="/tags/pytorch%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD/">
+                        <span class="chip bg-color">pytorch数据加载</span>
                     </a>
                     
                 </div>
