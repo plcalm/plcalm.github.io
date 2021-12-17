@@ -5,7 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="pathlib笔记, AIcalm">
-    <meta name="description" content="pathlib笔记 | AIcalm">
+    <meta name="description" content="1.导入包from  pathlib import Path
+# 获取相对路径，再获取绝对路径
+BasePath = Path().resolve()              # windows路径对象
+print(BasePath)  ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -413,7 +416,91 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="1-导入包"><a href="#1-导入包" class="headerlink" title="1.导入包"></a>1.导入包</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span>  pathlib <span class="token keyword">import</span> Path
+<span class="token comment" spellcheck="true"># 获取相对路径，再获取绝对路径</span>
+BasePath <span class="token operator">=</span> Path<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>resolve<span class="token punctuation">(</span><span class="token punctuation">)</span>              <span class="token comment" spellcheck="true"># windows路径对象</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>BasePath<span class="token punctuation">)</span>                              <span class="token comment" spellcheck="true"># 打印时直接将其转为字符串打印</span>
+</code></pre>
+<blockquote>
+<p>D:\Study\Python\Projects\Package-Learning\pathlib</p>
+</blockquote>
+<h3 id="2-Path的属性"><a href="#2-Path的属性" class="headerlink" title="2. Path的属性"></a>2. Path的属性</h3><pre class=" language-python"><code class="language-python">path <span class="token operator">=</span> BasePath  <span class="token operator">/</span>  <span class="token string">"学习pathlib.ipynb"</span>
+<span class="token comment" spellcheck="true"># 返回文件全名包含后缀名</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 返回文件名不包含后缀名</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>stem<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 返回后缀名</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>suffix<span class="token punctuation">)</span>             <span class="token comment" spellcheck="true"># suffixes: 所有后缀名</span>
+<span class="token comment" spellcheck="true"># 返回父级目录</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>parent<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 路径连接直接使用 path_a / path_b  即可</span>
+path<span class="token punctuation">.</span>parent<span class="token punctuation">.</span>name
+</code></pre>
+<blockquote>
+<p>学习pathlib.ipynb<br>学习pathlib<br>.ipynb<br>D:\Study\Python\Projects\Package-Learning\pathlib<br>‘pathlib’</p>
+</blockquote>
+<h3 id="3-Path的方法"><a href="#3-Path的方法" class="headerlink" title="3. Path的方法"></a>3. Path的方法</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 判断路径是否存在</span>
+path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span><span class="token punctuation">)</span>
+test_path <span class="token operator">=</span> path<span class="token punctuation">.</span>parent <span class="token operator">/</span> <span class="token string">"test"</span>
+<span class="token keyword">if</span> <span class="token operator">not</span> test_path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    test_path<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>test_path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> test_path<span class="token punctuation">)</span>
+</code></pre>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 如果创建文件夹存在，则忽略</span>
+test_path<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span>exist_ok <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 创建多级路径</span>
+new_test_path <span class="token operator">=</span> test_path <span class="token operator">/</span> <span class="token string">"new_test/new_new_test"</span>
+new_test_path<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span>exist_ok<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>  parents<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="4-删除文件夹"><a href="#4-删除文件夹" class="headerlink" title="4. 删除文件夹"></a>4. 删除文件夹</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 删除文件夹，必须是空的才可以</span>
+new_test_path<span class="token punctuation">.</span>rmdir<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="5-判断是文件夹还是文件"><a href="#5-判断是文件夹还是文件" class="headerlink" title="5. 判断是文件夹还是文件"></a>5. 判断是文件夹还是文件</h3><pre class=" language-python"><code class="language-python">path<span class="token punctuation">.</span>is_file<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>True</p>
+</blockquote>
+<pre class=" language-python"><code class="language-python">test_path<span class="token punctuation">.</span>is_dir<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>True</p>
+</blockquote>
+<h3 id="6-遍历文件夹"><a href="#6-遍历文件夹" class="headerlink" title="6. 遍历文件夹"></a>6. 遍历文件夹</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># .iterdir() 返回的是一个生成器</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>parent<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>parent<span class="token punctuation">.</span>iterdir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> path<span class="token punctuation">.</span>parent<span class="token punctuation">.</span>iterdir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>D:\Study\Python\Projects\Package-Learning\pathlib<br>&lt;generator object Path.iterdir at 0x0000012BA43BE510&gt;<br>D:\Study\Python\Projects\Package-Learning\pathlib\test<br>D:\Study\Python\Projects\Package-Learning\pathlib\学习pathlib.ipynb</p>
+</blockquote>
+<h3 id="7-遍历文件夹并指定要搜索的文件-glob-param"><a href="#7-遍历文件夹并指定要搜索的文件-glob-param" class="headerlink" title="7.  遍历文件夹并指定要搜索的文件.glob(param)"></a>7.  遍历文件夹并指定要搜索的文件.glob(param)</h3><pre class=" language-python"><code class="language-python"><span class="token triple-quoted-string string">""" 
+* : 代表匹配所有文件夹或路径
+*.pdf : 代表匹配所有后缀名为pdf的文件或路径
+Django* : 代表匹配所有以 Django 开头的文件或路径
+"""</span>
+
+path_ <span class="token operator">=</span> path<span class="token punctuation">.</span>parent
+path_<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">"*"</span><span class="token punctuation">)</span>                     <span class="token comment" spellcheck="true"># 生成器对象，所以通过for循环遍历</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> path_<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">"*"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>D:\Study\Python\Projects\Package-Learning\pathlib\test<br>D:\Study\Python\Projects\Package-Learning\pathlib\学习pathlib.ipynb</p>
+</blockquote>
+<h3 id="8-查看文件、文件夹的详细信息-stat"><a href="#8-查看文件、文件夹的详细信息-stat" class="headerlink" title="8. 查看文件、文件夹的详细信息 .stat()"></a>8. 查看文件、文件夹的详细信息 .stat()</h3><pre class=" language-python"><code class="language-python"><span class="token triple-quoted-string string">""" 
+.stat().st_size: 文件/文件夹大小
+.stat().st_ctime: 文件/文件夹创建时间
+.stat().st_mtime: 文件/文件夹修改时间
+"""</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>stat<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>st_size<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>stat<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>st_ctime<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>stat<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>st_mtime<span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>6265<br>1638971145.1882107<br>1638975243.8870032</p>
+</blockquote>
+
                 
             </div>
             <hr/>

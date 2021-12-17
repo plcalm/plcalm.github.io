@@ -559,6 +559,11 @@ config 文件
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
+                                1.导入包from  pathlib import Path
+# 获取相对路径，再获取绝对路径
+BasePath = Path().resolve()              # windows路径对象
+print(BasePath)  
+                            
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
