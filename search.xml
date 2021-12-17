@@ -29,13 +29,25 @@
     
     
     <entry>
-      <title>pots</title>
+      <title>pathlib笔记</title>
       <link href="/2021/12/08/Python-pathlib%E5%AD%A6%E4%B9%A0/"/>
       <url>/2021/12/08/Python-pathlib%E5%AD%A6%E4%B9%A0/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> python-package </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python-pathlib </tag>
+            
+        </tags>
       
     </entry>
     
